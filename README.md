@@ -3,19 +3,19 @@ This is an implementation of a singly Linked List in JavaScript.
 
 ## added methods:
 
-- `prepend(value)`: Adds a new node containing value to the beginning of the list.
-- `append(value)`: Adds a new node containing value to the end of the list.
+- `prepend(value)`: Adds a new node containing value to the beginning     of the list.
+- `append(value)`: Adds a new node containing value to the end of the     list.
 - `pop()`: Removes and returns the last node from the list.
+- `removeAt(index)`: Removes and returns the node at the given index.
 - `at(index)`: Returns the node at the given index.
+- `insertAt(value, index)`: Inserts a new node containing value at the     given index.
 - `size()`: Returns the number of nodes in the list.
 - `head()`: Returns the first node of the list.
 - `tail()`: Returns the tail node of the list.
-- `contains(value)`: Returns true if the list contains a node with the given value.
+- `contains(value)`: Returns true if the list contains a node with the     given value.
 - `find(value)`: Returns the index of the node with the given value.
 - `toArray()`: Returns an array of all the values in the list.
 - `toString()`: Returns a string representation of the list.
-- `insertAt(value, index)`: Inserts a new node containing value at the given index.
-- `removeAt(index)`: Removes the node at the given index.
 
 ### Here's an example usage of the **LinkedList** class:
 ```
