@@ -17,19 +17,25 @@ LinkedList.prototype = {
         const lastNode = this.tail()
         lastNode.nextNode = Node(value)
     },
-    size: function(sum = 0, node = this.head){
-            if(!node.value) return sum
-            if(node.nextNode == null) return ++sum;
-            return this.size(++sum, node.nextNode);
+    at: function(index, curIdx = 0, curNode = this.head){
+        if (curIdx === index || curNode.nextNode == null){
+            return curNode;
+        }
+        return this.at(index, ++curIdx, curNode.nextNode)
+    },
+    size: function(sum = 0, curNode = this.head){
+            if(!curNode.value) return sum
+            if(curNode.nextNode == null) return ++sum;
+            return this.size(++sum, curNode.nextNode);
     },
     head: function(){
         return this.head;
     },
-    tail: function(node = this.head){
-        if (node.nextNode != null){
-            return this.tail(node.nextNode);
+    tail: function(curNode = this.head){
+        if (curNode.nextNode != null){
+            return this.tail(curNode.nextNode);
         } 
-        return node;
+        return curNode;
     } 
 }
 
@@ -40,3 +46,4 @@ list.append('new tail');
 list.append('another new Tail');
 console.log(JSON.stringify(list, undefined, 2));
 console.log(list.size())
+console.log(list.at(1));
