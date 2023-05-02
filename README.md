@@ -1,5 +1,6 @@
 # Linked List
-This is an implementation of a singly Linked List in JavaScript. 
+This is an implementation of a singly Linked List in JavaScript.
+All methods traversing the list have been implemented recursively in this example.
 
 ## added methods:
 
